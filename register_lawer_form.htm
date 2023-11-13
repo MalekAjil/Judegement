@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript" src="register_lawer_form_info.js"> 
+
+</script>
+<title>تسجيل محامي جديد</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<style type="text/css">
+<!--
+.style2 {
+	font-family: Arial;
+	font-size: 20px;
+	color: #7F0000;
+}
+.style18 {font-size: 18; font-weight: bold; color: #bb2244; }
+.style21 {font-size: 18px; font-weight: bold; color: #bb2244; }
+.style22 {font-size: 18px}
+-->
+</style></head>
+
+<body background="images/indexp.jpg">
+<p align="center"> 
+<form name="form2" onSubmit="return check2()" action="register_lawer_code.php" method="post">
+  <table width="100%" height="100%" cellpadding="0"  cellspacing="0">
+     <tr bgcolor="#CCCCFF">
+        <td colspan="4" align="right"><div align="center"><span class="style2">:الرجاء إدخال البيانات التالية</span></div></td>
+    </tr>
+      <tr  class="style18">
+        <td width="38%" align="right"><span class="style21">
+          <input name="citizen" type="text" id="citizen" size="20" maxlength="50" tabindex="9">
+        </span></td>
+        <td width="21%" align="right"><span class="style21">الجنسية</span></td>
+        <td width="25%" align="right"><input name="username" type="text" id="username" size="20" maxlength="100" tabindex="1" > </td>
+        <td width="16%" align="right">اسم المستخدم</td>
+      </tr>
+      <tr class="style18">
+        <td align="right"><span class="style21">
+        <input name="year_birth" type="text" id="year" size="5" maxlength="4" tabindex="12">
+        <select name="month_birth" id="month_birth" tabindex="11">
+          <option value="jan">1</option>
+          <option value="feb">2</option>
+          <option value="mar">3</option>
+          <option value="apr">4</option>
+          <option value="may">5</option>
+          <option value="jun">6</option>
+          <option value="jul">7</option>
+          <option value="aug">8</option>
+          <option value="sep">9</option>
+          <option value="oct">10</option>
+          <option value="nov">11</option>
+          <option value="dec">12</option>
+        </select>
+        <select name="day_birth" id="day_birth" tabindex="10">
+          <option value="a">1</option>
+          <option value="b">2</option>
+          <option value="c">3</option>
+          <option value="d">4</option>
+          <option value="e">5</option>
+          <option value="f">6</option>
+          <option value="g">7</option>
+          <option value="h">8</option>
+          <option value="i">9</option>
+          <option value="j">10</option>
+          <option value="k">11</option>
+          <option value="l">12</option>
+          <option value="m">13</option>
+          <option value="n">14</option>
+          <option value="o">15</option>
+          <option value="p">16</option>
+          <option value="q">17</option>
+          <option value="r">18</option>
+          <option value="s">19</option>
+          <option value="t">20</option>
+          <option value="u">21</option>
+          <option value="v">23</option>
+          <option value="w">24</option>
+          <option value="y">25</option>
+          <option value="x">26</option>
+          <option value="z">27</option>
+          <option value="aa">28</option>
+          <option value="ab">29</option>
+          <option value="ac">30</option>
+          <option value="ad">31</option>
+        </select>
+</span></td>
+        <td align="right"><span class="style21">تاريخ الميلاد </span></td>
+        <td align="right"><input name="password" type="password" id="password" size="20" maxlength="50" tabindex="2"> </td>
+        <td align="right"><span class="style22">كلمة السر </span></td>
+      </tr>
+      <tr class="style18">
+        <td align="right"><span class="style21">
+          <input name="work_phone" type="text" id="work_phone" size="20" maxlength="20" tabindex="13">
+        </span></td>
+        <td align="right"><span class="style21">هاتف العمل </span></td>
+        <td align="right"><span class="style21">
+          <input name="lawer_name" type="text" id="lawer_name" size="20" maxlength="100" tabindex="3">
+        </span></td>
+        <td align="right"><span class="style21">الإسم والكنية</span></td>
+      </tr>
+      <tr >
+        <td align="right" class="style18"><span class="style21">
+          <input name="home_phone" type="text" id="home_phone" size="20" maxlength="20" tabindex="14">
+        </span></td>
+        <td align="right" class="style18"><span class="style21">هاتف المنزل </span></td>
+        <td align="right" class="style18"><span class="style21">
+          <input name="father_lawer" type="text" id="father_lawer" size="20" maxlength="50" tabindex="4">
+        </span></td>
+        <td align="right"><span class="style18">اسم الأب </span></td>
+      </tr>
+      <tr class="style18">
+        <td align="right"><span class="style21">
+          <input name="email" type="text" id="email" size="20" maxlength="100" tabindex="15">
+        </span></td>
+        <td align="right"> <span class="style21"> البريد الإلكتروني </span> </td>
+        <td align="right"><span class="style21">
+          <input name="mother_lawer" type="text" id="mother_lawer" size="20" maxlength="50" tabindex="5">
+        </span></td>
+        <td align="right"><span class="style21">اسم الأم </span></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="right" class="style18"><span class="style21">
+        <select name="section" id="section" tabindex="6">
+          <option value="a">القضايا المدنية</option>
+          <option value="b">القضايا الجزائية</option>
+          <option value="c">القضايا الإقتصادية</option>
+        </select>
+</span></td>
+        <td align="right" class="style18">الإختصاص</td>
+      </tr>
+      <tr >
+        <td colspan="3" align="right" class="style18"><span class="style21">
+          <input name="home_address" type="text" id="home_address" size="67" maxlength="256" tabindex="7">
+        </span></td>
+        <td align="right" class="style18"><span class="style21">عنوان الإقامة </span></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="right" class="style18"><span class="style21">
+          <input name="work_address" type="text" id="work_address" size="67" maxlength="256" tabindex="8">
+        </span></td>
+        <td align="right" class="style18"><span class="style21">عنوان العمل </span></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center" class="style18"><span class="style21">
+          <input name="Submit" type="submit" value=" تسجيل ">
+        </span><span class="style22"></span></td>
+      </tr>
+<tr >
+        <td height="28" colspan="3" align="right">
+<p align="center"><a href="index.php" title="العودة إلى الصفحة الرئيسية"><span class="style2">العودة إلى الصفحة الرئيسية</span></a></p></td>
+      </tr>
+  </table>
+</form>
+</p>
+</body>
+</html>

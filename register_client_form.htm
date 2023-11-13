@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript" src="register_client_form_info.js"> 
+
+</script>
+<title>تسجيل مستخدم جديد</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<style type="text/css">
+<!--
+.style2 {
+	font-family: Arial;
+	font-size: 24px;
+	color: #7F0000;
+}
+.style18 {font-size: 18; font-weight: bold; color: #ff2224; }
+.style26 {color: #660066; font-family: "MS Sans Serif"; font-size: 24px;}
+-->
+.spanstyle {
+	COLOR: black ; FONT-FAMILY: Verdana; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+var x, y;
+var step = 10;
+var flag = 0;
+
+var message = " w elcom e in our website ";
+message = message.split("");
+var xpos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+xpos[i] = -50;
+}
+var ypos = new Array();
+for (i = 0; i <= message.length - 1; i++) {
+ypos[i]= -50;
+}
+function handlerMM(e) {
+x = (document.layers) ? e.pageX : document.body.scrollLeft + event.clientX;
+y = (document.layers) ? e.pageY : document.body.scrollTop + event.clientY;
+flag = 1;
+}
+function makesnake() {
+if (flag == 1 && document.all) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("span" + (i) + ".style");
+thisspan.posLeft = xpos[i];
+thisspan.posTop = ypos[i];
+   }
+}
+else if (flag==1 && document.layers) {
+for (i = message.length - 1; i >= 1; i--) {
+xpos[i] = xpos[i - 1] + step;
+ypos[i] = ypos[i - 1];
+}
+xpos[0] = x + step;
+ypos[0] = y;
+for (i = 0; i < message.length - 1; i++) {
+var thisspan = eval("document.span" + i);
+thisspan.left = xpos[i];
+thisspan.top = ypos[i];
+   }
+}
+var timer = setTimeout("makesnake()", 10);
+}
+// End -->
+</script>
+</head>
+
+<body background="images/indexp.jpg" onload="makesnake()">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+for (i = 0; i <= message.length-1; i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>");
+document.write(message[i]);
+document.write("</span>");
+}
+if (document.layers) {
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+// End -->
+</script>
+
+<//--><//"--><!-- VC layer -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<LAYER SRC="' + ValueBanner + '&t=html" WIDTH="' + IWidth
++ '" ');
+document.write('HEIGHT="' + IHeight + '" VISIBILITY="hide" onLoad=');
+document.write('"moveToAbsolute(VC.pageX,VC.pageY); clip.width=' + IWidth
++ '; ');
+document.write('clip.height=' + IHeight +
+'; visibility=\'show\'"></LAYER>');
+// -->
+</SCRIPT>
+
+<p align="center"> 
+<form name="form1" action="register_client_code.php" method="post" onSubmit="return check()">
+  <table width="100%" height="100%" cellpadding="0"  cellspacing="0">
+     <tr bgcolor="#CCCCFF">
+        <td colspan="4" align="right"><div align="center"><span class="style2">:الرجاء إدخال البيانات التالية </span></div></td>
+    </tr>
+      <tr >
+        <td width="30%" align="right"><span class="style18">
+          <input name="personal_num" type="text" id="personal_num" size="20" maxlength="30" tabindex="13">
+        </span></td>
+        <td width="21%" align="right"><div align="center"><span class="style18">رقم الهوية 
+        </span></div></td>
+        <td width="27%" align="right"><div align="right"><span class="style18">
+          <input name="username" type="text" id="username" size="20" maxlength="100" tabindex="1">
+        </span></div></td>
+        <td width="22%" align="right"><div align="center"><span class="style18">اسم المستخدم</span></div></td>
+      </tr>
+      <tr >
+        <td align="right"><span class="style18">
+          <input name="place_out" type="text" id="place_out" size="20" maxlength="30" tabindex="14">
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">الجهة التي أصدرتها</span></div></td>
+        <td align="right"><span class="style18">
+          <input name="password" type="password" id="password" size="20" maxlength="50" tabindex="2">
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">كلمة السر </span></div></td>
+      </tr>
+      <tr>
+        <td align="right"><span class="style18">
+          <input name="year" type="text" id="place_out24" size="5" maxlength="4" tabindex="17">
+          <select name="month" id="select5" tabindex="16">
+            <option value="jan">1</option>
+            <option value="feb">2</option>
+            <option value="mar">3</option>
+            <option value="apr">4</option>
+            <option value="may">5</option>
+            <option value="jun">6</option>
+            <option value="jul">7</option>
+            <option value="aug">8</option>
+            <option value="sep">9</option>
+            <option value="oct">10</option>
+            <option value="nov">11</option>
+            <option value="dec">12</option>
+           
+        </select>
+          <select name="day" id="select4" tabindex="15">
+            <option value="a">1</option>
+            <option value="b">2</option>
+            <option value="c">3</option>
+            <option value="d">4</option>
+            <option value="e">5</option>
+            <option value="f">6</option>
+            <option value="g">7</option>
+            <option value="h">8</option>
+            <option value="i">9</option>
+            <option value="j">10</option>
+            <option value="k">11</option>
+            <option value="l">12</option>
+            <option value="m">13</option>
+            <option value="n">14</option>
+            <option value="o">15</option>
+            <option value="p">16</option>
+            <option value="q">17</option>
+            <option value="r">18</option>
+            <option value="s">19</option>
+            <option value="t">20</option>
+            <option value="u">21</option>
+            <option value="v">23</option>
+            <option value="w">24</option>
+            <option value="y">25</option>
+            <option value="x">26</option>
+            <option value="z">27</option>
+            <option value="aa">28</option>
+            <option value="ab">29</option>
+            <option value="ac">30</option>
+            <option value="ad">31</option>
+        </select>
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">
+        تاريخ الصدور </span></div></td>
+        <td align="right"><span class="style18">
+          <input name="client_name" type="text" id="client_name" size="20" maxlength="100" tabindex="3">
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">الإسم والكنية</span></div></td>
+      </tr>
+      <tr>
+        <td align="right"><span class="style18">
+          <input name="digit_num" type="text" id="digit_num" size="20" maxlength="20" tabindex="18">
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">رقم الخانة </span></div></td>
+        <td align="right"><span class="style18">
+          <input name="father_client" type="text" id="father_client" size="20" maxlength="50" tabindex="4">
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">اسم الأب </span></div></td>
+      </tr>
+      <tr >
+        <td align="right"><input name="job" type="text" id="job" size="20" maxlength="100" tabindex="19"></td>
+        <td align="right"><div align="center"><span class="style18">العمل</span></div></td>
+        <td align="right"><span class="style18">
+          <input name="mother_client" type="text" id="mother_client" size="20" maxlength="50" tabindex="5">
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">اسم الأم </span></div></td>
+      </tr>
+      <tr >
+        <td align="right"><input name="work_phone" type="text" id="work_phone" size="20" maxlength="20" tabindex="20"></td>
+        <td align="right"><div align="center"><span class="style18">هاتف العمل </span></div></td>
+        <td align="right"><span class="style18">
+          <input name="citizen" type="text" id="citizen" size="20" maxlength="50" tabindex="6">
+        </span></td>
+        <td align="right"><div align="center"><span class="style18">الجنسية</span></div></td>
+      </tr>
+      <tr >
+        <td align="right"><input name="home_phone" type="text" id="home_phone" size="20" maxlength="20" tabindex="21"></td>
+        <td align="right"><div align="center"><span class="style18">هاتف المنزل </span></div></td>
+        <td align="right"><span class="style18">
+        <input name="year_birth" type="text" id="year" size="5" maxlength="4" tabindex="9">
+        <select name="month_birth" id="month_birth" tabindex="8">
+          <option value="jan">1</option>
+          <option value="feb">2</option>
+          <option value="mar">3</option>
+          <option value="apr">4</option>
+          <option value="may">5</option>
+          <option value="jun">6</option>
+          <option value="jul">7</option>
+          <option value="aug">8</option>
+          <option value="sep">9</option>
+          <option value="oct">10</option>
+          <option value="nov">11</option>
+          <option value="dec">12</option>
+        </select>
+        <select name="day_birth" id="day_birth" tabindex="7">
+          <option value="a">1</option>
+          <option value="b">2</option>
+          <option value="c">3</option>
+          <option value="d">4</option>
+          <option value="e">5</option>
+          <option value="f">6</option>
+          <option value="g">7</option>
+          <option value="h">8</option>
+          <option value="i">9</option>
+          <option value="j">10</option>
+          <option value="k">11</option>
+          <option value="l">12</option>
+          <option value="m">13</option>
+          <option value="n">14</option>
+          <option value="o">15</option>
+          <option value="p">16</option>
+          <option value="q">17</option>
+          <option value="r">18</option>
+          <option value="s">19</option>
+          <option value="t">20</option>
+          <option value="u">21</option>
+          <option value="v">23</option>
+          <option value="w">24</option>
+          <option value="y">25</option>
+          <option value="x">26</option>
+          <option value="z">27</option>
+          <option value="aa">28</option>
+          <option value="ab">29</option>
+          <option value="ac">30</option>
+          <option value="ad">31</option>
+        </select>
+</span></td>
+        <td align="right" ><div align="center"><span class="style18">تاريخ الميلاد </span></div></td>
+      </tr>
+      <tr >
+        <td colspan="3" align="right"><input name="email" type="text" id="email" size="50" maxlength="100" tabindex="10"></td>
+        <td align="right">          <div align="center"><span class="style18">البريد الإلكتروني </span></div></td>
+      </tr>
+      <tr >
+        <td colspan="3" align="right"><input name="home_address" type="text" id="home_address" size="69" maxlength="256" tabindex="11"></td>
+        <td align="right"><div align="center"><span class="style18">عنوان الإقامة </span></div></td>
+      </tr>
+      <tr >
+        <td height="28" colspan="3" align="right" >        <input name="work_address" type="text" id="work_address" size="69" maxlength="256" tabindex="12"></td>
+        <td align="right"><div align="center"><span class="style18">عنوان العمل </span></div></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center" >   
+		     <input name="Submit" type="submit" value=" تسجيل " tabindex="22"></td>
+      </tr>
+<tr>
+        <td height="28" colspan="4" align="right" >
+<p align="center"><a href="index.php" title="العودة إلى الصفحة الرئيسية"><span class="style2">العودة إلى الصفحة الرئيسية</span></a></p></td>
+      </tr>
+  </table>
+</form>
+</p>
+</body>
+</html>
