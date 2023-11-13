@@ -1,2 +1,2 @@
-# Judegement
-this project is for employ a lawyer online and manage connection bitween the lawyer and the client
+# Judgement
+this project is for employing a lawyer online and managing connection bitween the lawyer and the client
